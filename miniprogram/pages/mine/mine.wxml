@@ -5,7 +5,7 @@
     <view class="profile-avatar">{{user.nickname[0]}}</view>
     <view class="profile-info">
       <view class="profile-name">{{user.nickname}}</view>
-      <view class="profile-sub">中国农业大学 · 资源与环境 硕士</view>
+      <view class="profile-sub">技能环用户 · 已加入 12 天</view>
     </view>
   </view>
 

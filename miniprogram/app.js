@@ -5,7 +5,7 @@ App({
   globalData: {
     // 当前用户（本地模拟；真机接入后端后由 wx.login 换取）
     user: {
-      nickname: '郭子仪',
+      nickname: '小环',
       credit: 4.8,                                  // 双向信用分
       coins: 3,                                     // 技能币余额
       taught: 2,                                    // 已教次数

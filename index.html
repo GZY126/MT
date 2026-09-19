@@ -293,7 +293,7 @@
       <!-- 我的名片 -->
       <div class="card-me">
         <div class="cm-head">
-          <div class="cm-avatar">郭</div>
+          <div class="cm-avatar">我</div>
           <div>
             <h4>我的技能名片</h4>
             <p class="cm-meta">信用分 92 · 技能币 <b id="coinNum">3</b></p>
@@ -539,6 +539,216 @@
           <p>匹配率低于阈值时，用户来两次没结果就走了，<b>飞轮根本不会转</b>。</p>
           <p>这也是为什么技能币是<b>启动器</b>而不是增长手段 —— 它决定了飞轮能不能被推动第一圈。</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 衡量标准 ============ -->
+<section class="section" id="metric">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">07 · 衡量标准</span>
+      <h2>我怎么判断这件事做成了</h2>
+      <p>只说「体验好」不算数。得先定清楚：拿什么数字验收。</p>
+    </div>
+
+    <div class="ns-box">
+      <div class="ns-label">北极星指标</div>
+      <div class="ns-value">周完成互换数</div>
+      <div class="ns-why">
+        不是 DAU，不是注册数，也不是匹配数。<b>只有「一次互换真正完成」才是价值交付的时刻</b> ——
+        用户真的学到了、对方真的教出去了。
+        注册数可以靠推广灌水，匹配数可以靠算法刷高，<b>只有完成数骗不了人</b>。
+      </div>
+    </div>
+
+    <table class="metric-table">
+      <thead>
+        <tr><th>环节</th><th>关键指标</th><th>目标</th><th>为什么看它</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>匹配</td><td>首次匹配得到结果的比例</td><td>&gt; 90%</td>
+          <td>三层兜底是否真的兜住了</td>
+        </tr>
+        <tr>
+          <td>转化</td><td>匹配 → 互试课完成率</td><td>&gt; 40%</td>
+          <td>「破冰」和「约时间」是不是真的卡点</td>
+        </tr>
+        <tr>
+          <td>履约</td><td>互试课 → 完整互换完成率</td><td>&gt; 50%</td>
+          <td>互试课的筛选机制有没有效</td>
+        </tr>
+        <tr class="metric-hot">
+          <td>留存</td><td>学员 → 老师转化率</td><td>&gt; 25%</td>
+          <td><b>飞轮能不能自己转，只看这一个数</b></td>
+        </tr>
+        <tr>
+          <td>健康</td><td>被鸽率</td><td>&lt; 10%</td>
+          <td>信用分约束到底有没有用</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="metric-two">
+      <div class="mt-card">
+        <h4>反指标：防止把数字做假</h4>
+        <ul>
+          <li><b>重复互换率</b> —— 只看总完成数，会被补贴堆出假繁荣；
+            真正要看的是同一个人会不会换第二次。</li>
+          <li><b>技能币通胀率</b> —— 发币速度长期高于消耗速度，币就废了，
+            技能币机制会连带失效。</li>
+          <li><b>教学头部集中度</b> —— 如果 10% 的人承担了 80% 的教学量，
+            说明普通用户「不敢教」，这是第 6 阶段转化失败的早期信号。</li>
+        </ul>
+      </div>
+      <div class="mt-card mt-card--stop">
+        <h4>什么情况下该停下来重想</h4>
+        <ul>
+          <li>匹配率长期 &lt; 40% → 是<b>用户密度不够</b>，不是功能不够。
+            这时候应该收缩到单点城市，而不是继续拉新。</li>
+          <li>学员转老师 &lt; 15% → 供给端断裂。飞轮不自转，
+            这个缺口<b>靠补贴补不回来</b>。</li>
+          <li>互试课后继续率 &lt; 30% → 是<b>匹配质量问题</b>，
+            先修算法、别急着扩张。</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 取舍边界 ============ -->
+<section class="section section--dark" id="scope">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">08 · 取舍边界</span>
+      <h2>我不做什么，比做什么更重要</h2>
+      <p>一个产品的上限，往往由「敢砍掉什么」决定。</p>
+    </div>
+
+    <div class="scope-list">
+      <div class="scope-item">
+        <div class="si-no">✕</div>
+        <div class="si-body">
+          <h4>不做录播课程</h4>
+          <p>一旦做课程，竞争对象立刻变成 B 站和慕课，而且会毁掉「互换」的平等感 ——
+            用户从「互相教」变成「看视频」，平台也就失去了存在的理由。</p>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="si-no">✕</div>
+        <div class="si-body">
+          <h4>不做现金交易与担保</h4>
+          <p>只要技能能用钱买到，技能币立刻贬值，「互换」就退化成「低价家教」。
+            <b>技能币只能靠教赚、只能用来学</b> —— 这个闭环一旦开口子，整套机制就塌了。</p>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="si-no">✕</div>
+        <div class="si-body">
+          <h4>不做全品类技能</h4>
+          <p>先只做<b>可 30 分钟交付、成果当场可见</b>的技能：乐器、摄影、剪辑、语言、软件操作。
+            排除考研辅导、编程入门这类需要长期系统学习的品类 ——
+            它们和「互换」的节奏根本不匹配。</p>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="si-no">✕</div>
+        <div class="si-body">
+          <h4>不做全国铺开</h4>
+          <p>双边平台的匹配率直接取决于<b>本地密度</b>。在 100 个城市各放 100 个用户，
+            匹配率趋近于 0；在 1 个校区放 1000 个用户，匹配率才有意义。
+            <b>先赢下一个校区，再复制。</b></p>
+        </div>
+      </div>
+
+      <div class="scope-item">
+        <div class="si-no">✕</div>
+        <div class="si-body">
+          <h4>不做教学排行榜</h4>
+          <p>排名会把「帮助别人」变成「与人竞争」，损伤互助氛围，
+            还会让新人因为排名落后而不敢教。
+            <b>信用分只记「有没有履约」，不评「教得好不好」</b> —— 后者会引入主观争议，且偏离核心目标。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 冷启动与风险 ============ -->
+<section class="section" id="coldstart">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">09 · 冷启动与风险</span>
+      <h2>前 100 个用户从哪来</h2>
+      <p>双边平台最难的不是做功能，是让第一批供需同时出现。</p>
+    </div>
+
+    <div class="cs-steps">
+      <div class="cs-step">
+        <div class="cs-no">1</div>
+        <div class="cs-body">
+          <h4>单点启动：一个校区，不是一座城市</h4>
+          <p>选 1 所高校。理由是<b>地理密度天然高</b> —— 用户走 10 分钟就能见面，互换才可能真的发生。
+            跨城的线上技能互换，履约率会低到没有意义。</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-no">2</div>
+        <div class="cs-body">
+          <h4>从「天然互补」的两个社团切入，而不是拉散客</h4>
+          <p>吉他社（会教乐器、想学视频剪辑）× 摄影社 / 计算机社（会剪辑、会编程，想学乐器）。
+            社团内部本来就有社群关系，<b>履约的信任成本几乎为零</b>，
+            比从零拉陌生用户快得多。</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-no">3</div>
+        <div class="cs-body">
+          <h4>用技能币补贴「第一次体验」</h4>
+          <p>新用户直接送 3 枚技能币（够换 1.5 次课）。目的不是拉新，
+            是<b>保证第一次互换一定能成</b> —— 用户第一次就成功，才可能来第二次。</p>
+        </div>
+      </div>
+      <div class="cs-step">
+        <div class="cs-no">4</div>
+        <div class="cs-body">
+          <h4>跑到匹配率 &gt; 60% 才复制到下一个校区</h4>
+          <p>没到这个数说明模型还没跑通。此时扩张只会稀释密度、把未验证的东西放大。
+            <b>先证明，再复制。</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="risk-two">
+      <div class="rk-card">
+        <h4>我赌了三个假设（都还没有验证）</h4>
+        <ul>
+          <li><b>假设 1</b>：用户愿意用「我教 30 分钟」换「别人教我 30 分钟」。
+            → 验证方式：看互试课完成率，低于 40% 说明这个交换意愿不成立。</li>
+          <li><b>假设 2</b>：技能币能解决「双方不互补也能换」。
+            → 验证方式：对比 L2 与 L1 匹配的接受率。如果 L2 明显不被接受，
+            说明用户只认精准互匹，那技能币的价值要重新评估。</li>
+          <li><b>假设 3</b>：学完的人愿意转身去教。
+            → 验证方式：第 6 阶段转化率。这是飞轮能否自转的唯一证据。</li>
+        </ul>
+      </div>
+      <div class="rk-card rk-card--warn">
+        <h4>我知道的两处不足</h4>
+        <ul>
+          <li><b>0.8% 这个数有前提</b>：它假设技能在人群中均匀分布。现实中「会英语的人」远多于
+            「会乐器的人」，实际双向命中率<b>可能更低</b> —— 这反而加强了技能币的必要性。
+            但也可能相反：同质化社群（一个班里都是计算机专业）想学的东西高度集中，
+            命中率会更高，那 L1 可能就够了，技能币的价值要下调。</li>
+          <li><b>最大的风险不在技术，在心理</b>：很多人是「想学但不敢教」，
+            觉得自己不够专业就不配教。我目前只有设计上的对策 ——
+            把「能教」的门槛降到「比对方多会一点」而不是「专业水平」，
+            但这条到底有没有用，只能靠真实数据说话。</li>
+        </ul>
       </div>
     </div>
   </div>
