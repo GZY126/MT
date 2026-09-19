@@ -1,0 +1,56 @@
+<view class="page-wrap">
+
+  <!-- 未开始 -->
+  <view wx:if="{{step === 0}}" class="start-wrap">
+    <view class="start-title">开始匹配</view>
+    <view class="tip" style="text-align:center;margin-bottom:40rpx">
+      系统会依次尝试三层策略，第一层不中自动降级到下一层
+    </view>
+    <button class="btn btn-orange" bindtap="startMatch">开始匹配</button>
+  </view>
+
+  <!-- 匹配中 / 结果 -->
+  <block wx:else>
+    <!-- 进度提示 -->
+    <view class="status-bar">
+      <view class="status-text">{{statusText}}</view>
+      <view class="mini" wx:if="{{coinsUsed > 0}}">
+        已消耗 {{coinsUsed}} 技能币 · 余额 {{user.coins}}
+      </view>
+    </view>
+
+    <!-- 匹配结果卡片 -->
+    <view class="layer-card {{item.state}}" wx:for="{{layers}}" wx:key="level">
+      <view class="layer-head">
+        <view class="layer-badge">{{item.level}}</view>
+        <view class="layer-name">{{item.name}}</view>
+        <view class="layer-state">{{item.stateText}}</view>
+      </view>
+      <view class="layer-desc">{{item.desc}}</view>
+
+      <view wx:if="{{item.matched}}" class="match-box">
+        <view class="match-user">
+          <view class="avatar">{{item.partner.initial}}</view>
+          <view class="match-info">
+            <view class="match-name">{{item.partner.name}} · 信用 {{item.partner.credit}}</view>
+            <view class="mini">TA 能教：{{item.partner.teach}}</view>
+            <view class="mini">TA 想学：{{item.partner.learn}}</view>
+          </view>
+        </view>
+        <button class="btn btn-primary" bindtap="goExchange">发起互换</button>
+      </view>
+    </view>
+
+    <view wx:if="{{finished}}" class="card">
+      <view class="card-title">为什么是这三层</view>
+      <view class="tip">
+        双边互匹命中率只有约 0.8%，单靠 L1 用户等不到结果就会流失。
+        L2 用技能币把「双边易货」降级成「多边交易」，
+        L3 用三人循环解决冷启动 —— 三层叠加保证「一定有结果」。
+      </view>
+    </view>
+
+    <button wx:if="{{finished}}" class="btn btn-ghost" bindtap="reset">重新匹配</button>
+  </block>
+
+</view>

@@ -1,0 +1,89 @@
+/* 我的页专属样式 */
+.profile-card {
+  display: flex;
+  align-items: center;
+  background: #1A1A1A;
+  border-radius: 20rpx;
+  padding: 36rpx 30rpx;
+  margin-bottom: 24rpx;
+}
+
+.profile-avatar {
+  width: 104rpx;
+  height: 104rpx;
+  border-radius: 50%;
+  background: #FF6B35;
+  color: #FFFFFF;
+  font-size: 42rpx;
+  font-weight: 700;
+  text-align: center;
+  line-height: 104rpx;
+  margin-right: 24rpx;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  color: #FFFFFF;
+  font-size: 36rpx;
+  font-weight: 700;
+  margin-bottom: 8rpx;
+}
+
+.profile-sub {
+  color: #A8A8A2;
+  font-size: 23rpx;
+}
+
+/* 身份转化 */
+.convert-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.convert-item {
+  text-align: center;
+  flex: 1;
+}
+
+.convert-num {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #1A1A1A;
+}
+
+.convert-arrow {
+  color: #D8D8D4;
+  font-size: 30rpx;
+}
+
+/* 设置项 */
+.setting-item {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #F2F2EF;
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-left {
+  flex: 1;
+  padding-right: 16rpx;
+}
+
+.setting-name {
+  font-size: 28rpx;
+  margin-bottom: 6rpx;
+}
+
+.setting-btn {
+  font-size: 24rpx;
+  color: #FF6B35;
+  border: 1rpx solid #FFD9C7;
+  border-radius: 100rpx;
+  padding: 10rpx 28rpx;
+  flex-shrink: 0;
+}

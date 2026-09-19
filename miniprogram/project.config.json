@@ -1,0 +1,14 @@
+{
+  "description": "技能环 SkillLoop 小程序端 · 开发雏形",
+  "appid": "touristappid",
+  "projectname": "skillloop-miniprogram",
+  "libVersion": "3.0.0",
+  "compileType": "miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true
+  }
+}

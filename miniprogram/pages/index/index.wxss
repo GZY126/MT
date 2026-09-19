@@ -1,0 +1,60 @@
+/* 首页专属样式 */
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #F2F2EF;
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.todo-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  border: 3rpx solid #FF6B35;
+  margin-right: 20rpx;
+  flex-shrink: 0;
+}
+
+.todo-dot.done {
+  background: #D8D8D4;
+  border-color: #D8D8D4;
+}
+
+.todo-body {
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 28rpx;
+  color: #1A1A1A;
+}
+
+.todo-text.done-text {
+  color: #B4B4AF;
+  text-decoration: line-through;
+}
+
+.todo-arrow {
+  font-size: 36rpx;
+  color: #D8D8D4;
+  margin-left: 12rpx;
+}
+
+.notice-card {
+  background: linear-gradient(135deg, #FFF6F1 0%, #FFFFFF 100%);
+  border: 1rpx solid #FFD9C7;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  margin-top: 8rpx;
+}
+
+.notice-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #FF6B35;
+  margin-bottom: 14rpx;
+}

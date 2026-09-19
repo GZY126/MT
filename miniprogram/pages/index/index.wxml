@@ -1,0 +1,63 @@
+<view class="page-wrap">
+
+  <!-- 资产条 -->
+  <view class="asset-bar">
+    <view class="asset-item">
+      <view class="asset-num">{{user.coins}}</view>
+      <view class="asset-label">技能币</view>
+    </view>
+    <view class="asset-item">
+      <view class="asset-num">{{user.credit}}</view>
+      <view class="asset-label">信用分</view>
+    </view>
+    <view class="asset-item">
+      <view class="asset-num">{{user.taught + user.learned}}</view>
+      <view class="asset-label">已完成互换</view>
+    </view>
+  </view>
+
+  <!-- 技能名片 -->
+  <view class="card">
+    <view class="card-title">我的技能名片</view>
+    <view class="tag-row">
+      <view class="tag-label">我能教</view>
+      <view class="tag tag-teach" wx:for="{{user.canTeach}}" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="tag-row">
+      <view class="tag-label">我想学</view>
+      <view class="tag tag-learn" wx:for="{{user.wantLearn}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <!-- 开始匹配 -->
+  <button class="btn btn-orange" bindtap="goMatch">开始匹配</button>
+  <view class="tip" style="text-align:center;margin:18rpx 0 30rpx">
+    三重匹配策略：精准互匹 → 技能币匹配 → 技能环撮合
+  </view>
+
+  <!-- 今日待办：留存抓手 -->
+  <view class="card">
+    <view class="card-title">今日待办</view>
+    <view class="todo-item" wx:for="{{todos}}" wx:key="id" bindtap="onTodoTap" data-id="{{item.id}}">
+      <view class="todo-dot {{item.done ? 'done' : ''}}"></view>
+      <view class="todo-body">
+        <view class="todo-text {{item.done ? 'done-text' : ''}}">{{item.text}}</view>
+        <view class="mini">{{item.time}}</view>
+      </view>
+      <view class="todo-arrow">›</view>
+    </view>
+    <view wx:if="{{todos.length === 0}}" class="tip">今天没有待办，去发起一次互换吧</view>
+  </view>
+
+  <!-- 订阅提醒：留存核心能力 -->
+  <view class="notice-card">
+    <view class="notice-title">开启履约提醒</view>
+    <view class="tip" style="margin-bottom:20rpx">
+      互换最容易死在「忘了」和「被鸽」。开启提醒后，互试课开始、对方确认、
+      履约节点都会通过微信服务通知提醒你。
+    </view>
+    <button class="btn btn-ghost" bindtap="onSubscribe">开启微信提醒</button>
+    <view class="mini" style="margin-top:16rpx">订阅消息需在点击时授权，仅用于履约提醒</view>
+  </view>
+
+</view>

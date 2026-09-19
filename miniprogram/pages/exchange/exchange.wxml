@@ -1,0 +1,59 @@
+<view class="page-wrap">
+
+  <!-- 进行中 -->
+  <view class="card">
+    <view class="card-title">进行中</view>
+
+    <view class="ex-item" wx:for="{{ongoing}}" wx:key="id">
+      <view class="ex-head">
+        <view class="ex-title">{{item.title}}</view>
+        <view class="ex-stage">{{item.stageText}}</view>
+      </view>
+
+      <!-- 六阶段进度 -->
+      <view class="steps">
+        <view class="step {{index < item.stage ? 'passed' : ''}} {{index === item.stage ? 'current' : ''}}"
+              wx:for="{{steps}}" wx:for-item="stepName" wx:key="*this">
+          <view class="step-dot"></view>
+          <view class="step-name">{{stepName}}</view>
+        </view>
+      </view>
+
+      <view class="ex-meta">
+        <text class="mini">{{item.partner}} · 信用 {{item.credit}}</text>
+        <text class="mini">下次：{{item.next}}</text>
+      </view>
+
+      <view class="ex-actions">
+        <button class="btn btn-ghost ex-btn" bindtap="onRemind" data-id="{{item.id}}">提醒对方</button>
+        <button class="btn btn-primary ex-btn" bindtap="onCheckin" data-id="{{item.id}}">本次打卡</button>
+      </view>
+    </view>
+
+    <view wx:if="{{ongoing.length === 0}}" class="tip">还没有进行中的互换</view>
+  </view>
+
+  <!-- 待处理 -->
+  <view class="card">
+    <view class="card-title">待处理</view>
+    <view class="pending-item" wx:for="{{pending}}" wx:key="id">
+      <view class="pending-left">
+        <view class="pending-title">{{item.title}}</view>
+        <view class="mini">{{item.desc}}</view>
+      </view>
+      <view class="pending-btn" bindtap="onAccept" data-id="{{item.id}}">处理</view>
+    </view>
+    <view wx:if="{{pending.length === 0}}" class="tip">暂无待处理事项</view>
+  </view>
+
+  <!-- 已完成 -->
+  <view class="card">
+    <view class="card-title">已完成</view>
+    <view class="done-item" wx:for="{{done}}" wx:key="id">
+      <view class="done-title">{{item.title}}</view>
+      <view class="mini">{{item.date}} · {{item.result}}</view>
+    </view>
+    <view wx:if="{{done.length === 0}}" class="tip">还没有完成的互换</view>
+  </view>
+
+</view>

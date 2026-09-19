@@ -1,0 +1,137 @@
+/* 互换页专属样式 */
+.ex-item {
+  padding: 24rpx 0;
+  border-bottom: 1rpx solid #F2F2EF;
+}
+
+.ex-item:last-child {
+  border-bottom: none;
+}
+
+.ex-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20rpx;
+}
+
+.ex-title {
+  font-size: 29rpx;
+  font-weight: 600;
+  flex: 1;
+}
+
+.ex-stage {
+  font-size: 22rpx;
+  color: #FF6B35;
+  background: #FFF1EA;
+  border-radius: 100rpx;
+  padding: 4rpx 16rpx;
+  margin-left: 12rpx;
+  flex-shrink: 0;
+}
+
+/* 六阶段进度 */
+.steps {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.step {
+  flex: 1;
+  text-align: center;
+}
+
+.step-dot {
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  background: #E4E4E0;
+  margin: 0 auto 8rpx;
+}
+
+.step.passed .step-dot {
+  background: #FF6B35;
+}
+
+.step.current .step-dot {
+  background: #FF6B35;
+  box-shadow: 0 0 0 6rpx #FFE4D6;
+}
+
+.step-name {
+  font-size: 19rpx;
+  color: #B4B4AF;
+}
+
+.step.passed .step-name,
+.step.current .step-name {
+  color: #FF6B35;
+  font-weight: 600;
+}
+
+.ex-meta {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22rpx;
+}
+
+.ex-actions {
+  display: flex;
+  gap: 18rpx;
+}
+
+.ex-btn {
+  flex: 1;
+  height: 76rpx;
+  line-height: 76rpx;
+  font-size: 27rpx;
+}
+
+/* 待处理 */
+.pending-item {
+  display: flex;
+  align-items: center;
+  padding: 22rpx 0;
+  border-bottom: 1rpx solid #F2F2EF;
+}
+
+.pending-item:last-child {
+  border-bottom: none;
+}
+
+.pending-left {
+  flex: 1;
+  padding-right: 16rpx;
+}
+
+.pending-title {
+  font-size: 27rpx;
+  margin-bottom: 6rpx;
+}
+
+.pending-btn {
+  font-size: 25rpx;
+  color: #FFFFFF;
+  background: #1A1A1A;
+  border-radius: 100rpx;
+  padding: 12rpx 30rpx;
+  flex-shrink: 0;
+}
+
+/* 已完成 */
+.done-item {
+  padding: 18rpx 0;
+  border-bottom: 1rpx solid #F2F2EF;
+}
+
+.done-item:last-child {
+  border-bottom: none;
+}
+
+.done-title {
+  font-size: 27rpx;
+  color: #6B6B6B;
+  margin-bottom: 4rpx;
+}

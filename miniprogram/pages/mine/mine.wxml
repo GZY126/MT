@@ -1,0 +1,82 @@
+<view class="page-wrap">
+
+  <!-- 个人卡片 -->
+  <view class="profile-card">
+    <view class="profile-avatar">{{user.nickname[0]}}</view>
+    <view class="profile-info">
+      <view class="profile-name">{{user.nickname}}</view>
+      <view class="profile-sub">中国农业大学 · 资源与环境 硕士</view>
+    </view>
+  </view>
+
+  <!-- 数据 -->
+  <view class="asset-bar">
+    <view class="asset-item">
+      <view class="asset-num">{{user.coins}}</view>
+      <view class="asset-label">技能币</view>
+    </view>
+    <view class="asset-item">
+      <view class="asset-num">{{user.credit}}</view>
+      <view class="asset-label">信用分</view>
+    </view>
+    <view class="asset-item">
+      <view class="asset-num">{{user.canTeach.length}}</view>
+      <view class="asset-label">可教技能</view>
+    </view>
+  </view>
+
+  <!-- 身份转化：增长命门 -->
+  <view class="card">
+    <view class="card-title">身份转化进度</view>
+    <view class="tip" style="margin-bottom:20rpx">
+      学会的技能会自动加入「我能教」清单。这是平台的增长命门 ——
+      如果用户学完就走，平台永远缺老师。
+    </view>
+    <view class="convert-row">
+      <view class="convert-item">
+        <view class="convert-num">{{user.learned}}</view>
+        <view class="mini">学过</view>
+      </view>
+      <view class="convert-arrow">→</view>
+      <view class="convert-item">
+        <view class="convert-num hl">{{user.taught}}</view>
+        <view class="mini">教过</view>
+      </view>
+      <view class="convert-arrow">→</view>
+      <view class="convert-item">
+        <view class="convert-num">{{user.credit}}</view>
+        <view class="mini">信用分</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 订阅消息设置：留存关键 -->
+  <view class="card">
+    <view class="card-title">消息提醒</view>
+    <view class="setting-item" wx:for="{{settings}}" wx:key="key">
+      <view class="setting-left">
+        <view class="setting-name">{{item.name}}</view>
+        <view class="mini">{{item.desc}}</view>
+      </view>
+      <view class="setting-btn" bindtap="onToggle" data-key="{{item.key}}">开启</view>
+    </view>
+  </view>
+
+  <!-- 技能名片 -->
+  <view class="card">
+    <view class="card-title">我的技能名片</view>
+    <view class="tag-row">
+      <view class="tag-label">我能教</view>
+      <view class="tag tag-teach" wx:for="{{user.canTeach}}" wx:key="*this">{{item}}</view>
+    </view>
+    <view class="tag-row">
+      <view class="tag-label">我想学</view>
+      <view class="tag tag-learn" wx:for="{{user.wantLearn}}" wx:key="*this">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="tip" style="text-align:center;padding:20rpx 0">
+    技能环 SkillLoop · 小程序端开发雏形 v0.1
+  </view>
+
+</view>
