@@ -201,14 +201,4 @@ templates: {
 
 ---
 
-## 作者
-
-**郭子仪**　中国农业大学（985 / 双一流）资源与环境 硕士
-
-- GitHub：https://github.com/GZY126
-- 其他作品：https://gzy126.github.io
-- 邮箱：guoziyi126@qq.com
-
----
-
 <sub>本项目为产品设计原型，以 Vibe Coding 方式完成 · 2026</sub>
