@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>项目说明 · 技能环 SkillLoop</title>
+<meta name="description" content="技能互换平台「技能环 SkillLoop」的产品设计说明与设计思路。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="dot"></span>技能环 SkillLoop</div>
+    <ul class="nav-links">
+      <li><a href="index.html">原型演示</a></li>
+      <li><a href="about.html">项目说明</a></li>
+      <li><a href="https://github.com/GZY126/MT" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding:78px 0 46px">
+  <div class="container">
+    <div class="hero-badge">项目说明</div>
+    <h1 class="hero-title" style="font-size:clamp(30px,4.6vw,46px)">
+      技能环 <span class="hero-title-en">SkillLoop</span>
+    </h1>
+    <p class="hero-sub" style="margin-bottom:30px">
+      一个「技能互换平台」的产品设计原型 ——
+      让用户发布「我能教的」和「我想学的」，实现技能匹配与交换。
+    </p>
+    <div class="hero-actions">
+      <a href="index.html" class="btn btn-primary">进入原型演示</a>
+      <a href="https://github.com/GZY126/MT" class="btn btn-ghost" target="_blank" rel="noopener">查看仓库</a>
+    </div>
+  </div>
+</header>
+
+<section class="section" style="padding-top:24px">
+  <div class="container about-wrap">
+
+    <div class="about-card">
+      <h2>要解决的问题</h2>
+      <p>
+        很多人想学新技能（吉他、摄影、Python……），但报班贵、自学难坚持；
+        同时自己擅长的技能又缺少分享和变现的渠道。技能互换看起来是双赢的解法，
+        但真正做起来，卡点比想象中多。
+      </p>
+      <p>
+        我把问题拆成四层，逐层找可动手的点：
+      </p>
+      <ul>
+        <li><b>需求侧</b>：卡在「坚持」而不是「内容」—— 缺的是反馈与监督</li>
+        <li><b>供给侧</b>：想分享但门槛高，甚至不知道自己算不算「能教」</li>
+        <li><b>匹配层</b>：双边互补概率极低 —— 这是产品的生死线</li>
+        <li><b>履约层</b>：被鸽、教学质量无保障、中途放弃</li>
+      </ul>
+    </div>
+
+    <div class="about-card">
+      <h2>核心洞察：双重巧合</h2>
+      <p>
+        技能互换要求 <b>A 能教的 = B 想学的</b>，<b>且 B 能教的 = A 想学的</b> ——
+        两个条件必须同时成立。这是一个<b>双边匹配</b>问题，不是单边。
+      </p>
+      <p>
+        按 100 个技能标签、每人能教/想学各 3 个估算，双向同时命中的概率
+        <b>只有约 0.8%</b>：一千次配对里只有约 8 次能真正换起来。
+        用户来两次没结果就走了，产品根本转不动。
+      </p>
+      <p>
+        <b>所以第一性问题不是「界面怎么设计」，而是「怎么打破双边锁死」。</b>
+        页面上所有机制都围绕这一件事展开。
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>设计了什么</h2>
+      <ul>
+        <li><b>技能币</b>：把「双边易货」降级为「多边交易」—— 我教你赚币，用币去学别人，
+            不再要求双方刚好互补。这是破解双重巧合的根本手段。</li>
+        <li><b>三层匹配漏斗</b>：L1 精准互匹（体验最优）→ L2 技能币匹配（保证有结果）→
+            L3 技能环三人循环（冷启动兜底）。</li>
+        <li><b>互试一节课</b>：双方各教 30 分钟、免费，双向评价后再决定是否继续 ——
+            把启动成本从「报名一门课」降到「聊半小时」。</li>
+        <li><b>双向信用分</b>：完成互换加分、鸽人扣分；评价是对称的，
+            不只学员评老师，老师也评学员「好不好教」。</li>
+        <li><b>技能地图</b>：把「人列表」换成「技能节点 + 供需状态」，
+            平台可立刻识别哪项技能供不应求，引导用户去教紧缺技能。</li>
+      </ul>
+      <p>
+        此外还梳理了<b>六阶段履约链路</b>（破冰 → 互试课 → 定计划 → 履约跟踪 →
+        完成结算 → 身份转化），每一阶段都标注了流失点与对策。
+        其中第六阶段「学员转为老师」被标记为<b>增长命门</b> ——
+        如果用户学完就走，平台永远缺老师、永远要靠补贴拉供给。
+      </p>
+    </div>
+
+    <div class="about-card">
+      <h2>怎么看这个作品</h2>
+      <div class="about-meta">
+        <div>
+          <b>原型演示</b>
+          <span><a href="index.html" style="color:#FF6B35;text-decoration:none;font-weight:600">index.html</a>
+          —— 含可交互的匹配演示，点击「开始匹配」依次查看三层匹配结果</span>
+        </div>
+        <div>
+          <b>完成方式</b>
+          <span>以 Vibe Coding 方式完成，纯前端实现，无外部依赖</span>
+        </div>
+        <div>
+          <b>技术栈</b>
+          <span>原生 HTML + CSS + JavaScript</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-card">
+      <h2>作者</h2>
+      <p style="margin-bottom:16px">
+        <b style="font-size:16px">郭子仪</b>　中国农业大学（985 / 双一流）资源与环境 硕士
+      </p>
+      <div class="about-meta">
+        <div><b>邮箱</b><span>guoziyi126@qq.com</span></div>
+        <div><b>电话</b><span>18865840956</span></div>
+        <div><b>GitHub</b><span><a href="https://github.com/GZY126" target="_blank" rel="noopener"
+          style="color:#FF6B35;text-decoration:none;font-weight:600">github.com/GZY126</a></span></div>
+      </div>
+      <div class="about-links" style="margin-top:20px">
+        <a href="index.html" class="primary">进入原型演示</a>
+        <a href="https://github.com/GZY126/MT" target="_blank" rel="noopener">GitHub 仓库</a>
+        <a href="https://gzy126.github.io" target="_blank" rel="noopener">我的其他作品</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>技能环 SkillLoop · 技能互换平台 · 产品设计原型</p>
+    <p class="footer-sub">
+      <a href="index.html">原型演示</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/GZY126/MT" target="_blank" rel="noopener">GitHub 仓库</a>
+      <span class="sep">·</span>
+      Vibe Coding 方式完成 · 2026
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

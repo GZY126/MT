@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>技能环 SkillLoop · 技能互换平台</title>
+<meta name="description" content="技能互换平台产品设计原型：用技能币破解双边匹配难题，让技能双向流动。">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-glow"></div>
+
+<!-- ============ 导航 ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span class="dot"></span>技能环 SkillLoop</div>
+    <ul class="nav-links">
+      <li><a href="#pain">痛点</a></li>
+      <li><a href="#insight">核心难题</a></li>
+      <li><a href="#mechanism">机制</a></li>
+      <li><a href="#demo">匹配演示</a></li>
+      <li><a href="#flow">履约链路</a></li>
+      <li><a href="#flywheel">飞轮</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-badge">附加题作品 · Vibe Coding 雏形</div>
+    <h1 class="hero-title">
+      技能环 <span class="hero-title-en">SkillLoop</span>
+    </h1>
+    <p class="hero-sub">
+      我会的，换你不会的。<br>
+      一个让技能<span class="hl">双向流动</span>的互换平台 —— 不花一分钱，用你的能力换你的成长。
+    </p>
+
+    <div class="hero-stats">
+      <div class="stat"><b>0</b><span>元起步（技能币替代付费）</span></div>
+      <div class="stat"><b>3</b><span>层匹配漏斗</span></div>
+      <div class="stat"><b>6</b><span>阶段履约链路</span></div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#insight" class="btn btn-primary">先看真正的难题</a>
+      <a href="#demo" class="btn btn-ghost">跳到匹配演示</a>
+    </div>
+  </div>
+  <div class="scroll-hint"><span></span>向下滚动</div>
+</header>
+
+<!-- ============ 痛点分层 ============ -->
+<section class="section" id="pain">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">01 · 问题定义</span>
+      <h2>痛点不是「找不到人」，而是四层叠加</h2>
+      <p>把问题拆到能动手的粒度，才能知道产品该先解决哪一层。</p>
+    </div>
+
+    <div class="pain-grid">
+      <div class="pain-card">
+        <div class="pain-idx">需求侧</div>
+        <h4>想学的人：卡在「坚持」而不是「内容」</h4>
+        <ul>
+          <li>报班贵 —— 单节课动辄数百元</li>
+          <li><b>自学难坚持</b> —— 缺的是反馈与监督，不是资料</li>
+          <li>不知道从哪学起 —— 路径不清晰</li>
+          <li>身边没人会 —— 供给缺失</li>
+          <li>怕被割韭菜 —— 信任成本高</li>
+        </ul>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-idx">供给侧</div>
+        <h4>能教的人：想分享，但门槛太高</h4>
+        <ul>
+          <li>技能无法变现 —— 缺渠道</li>
+          <li>做课程成本高 —— 录课、剪辑、流量都要投入</li>
+          <li>时间碎片化 —— 无法承诺长期教学</li>
+          <li><b>不知道自己算不算「能教」</b> —— 自我评估缺失</li>
+          <li>劳动价值难衡量 —— 教一小时值多少？</li>
+        </ul>
+      </div>
+
+      <div class="pain-card pain-card--hot">
+        <div class="pain-idx">匹配层 · 致命</div>
+        <h4>双重巧合：这是产品的生死线</h4>
+        <ul>
+          <li>要求 <b>A 能教的 = B 想学的</b>，<b>且 B 能教的 = A 想学的</b></li>
+          <li>两个条件同时成立 —— 这是<b>双边匹配</b>，不是单边</li>
+          <li>用户池越小，成功率越趋近于 0</li>
+          <li>技能价值不对等：会弹吉他 ≠ 会写 Python</li>
+        </ul>
+        <a href="#insight" class="pain-link">→ 看它到底有多难</a>
+      </div>
+
+      <div class="pain-card">
+        <div class="pain-idx">履约层</div>
+        <h4>匹配上了，也可能什么都换不成</h4>
+        <ul>
+          <li>时间协调难 —— 双方日程对不上</li>
+          <li>教学质量无保障 —— 教得好不好？</li>
+          <li><b>被鸽</b> —— 约好了对方不来</li>
+          <li>中途放弃 —— 学到一半不学了</li>
+          <li>线下见面的安全与隐私问题</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 核心洞察 ============ -->
+<section class="section section--dark" id="insight">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">02 · 核心洞察</span>
+      <h2>技能互换的第一性问题：<span class="hl-warm">双重巧合</span></h2>
+      <p>大部分同类产品死在这里 —— 它们试图让「双边易货」跑起来。</p>
+    </div>
+
+    <div class="formula-box">
+      <div class="formula-line">
+        <span class="f-tag f-tag--teach">A 能教的</span>
+        <span class="f-eq">=</span>
+        <span class="f-tag f-tag--learn">B 想学的</span>
+      </div>
+      <div class="formula-and">且</div>
+      <div class="formula-line">
+        <span class="f-tag f-tag--teach">B 能教的</span>
+        <span class="f-eq">=</span>
+        <span class="f-tag f-tag--learn">A 想学的</span>
+      </div>
+      <div class="formula-result">
+        <span class="f-arrow">↓</span>
+        <div class="f-lock">双边锁死</div>
+      </div>
+    </div>
+
+    <div class="calc-box">
+      <h4>算一下就懂了</h4>
+      <table class="calc-table">
+        <tr><td>技能标签池</td><td><b>100</b> 个</td></tr>
+        <tr><td>每人均能教 / 想学</td><td><b>3</b> 个技能</td></tr>
+        <tr><td>单向命中概率</td><td><b>≈ 8.7%</b></td></tr>
+        <tr class="calc-hot"><td>双向同时命中</td><td><b>≈ 0.8%</b></td></tr>
+      </table>
+      <p class="calc-note">
+        也就是说 —— <b>一千次配对里，只有约 8 次能真正换起来。</b>
+        用户来两次没结果就走了，飞轮根本转不动。
+      </p>
+    </div>
+
+    <div class="insight-conclusion">
+      <div class="ic-icon">!</div>
+      <div>
+        <h4>所以产品的第一个问题不是「界面怎么设计」，而是「怎么打破双重巧合」</h4>
+        <p>下面的五项机制，全部围绕这一件事展开。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 五项机制 ============ -->
+<section class="section" id="mechanism">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">03 · 机制设计</span>
+      <h2>五项机制，破解双边锁死</h2>
+      <p>前两项是「让产品成立」，后三项是「让它转得好」。</p>
+    </div>
+
+    <!-- 机制 1 -->
+    <div class="mech mech--hero">
+      <div class="mech-head">
+        <span class="mech-no">机制 1</span>
+        <h3>技能币 —— 把「双边易货」变成「多边交易」</h3>
+        <span class="mech-key">核心</span>
+      </div>
+      <p class="mech-desc">
+        这是破解双重巧合的<strong>根本手段</strong>。用户之间不再需要彼此刚好互补，
+        只需「有人要学我教的」和「有人能教我学的」这两件事分别成立。
+      </p>
+
+      <div class="coin-flow">
+        <div class="coin-step">
+          <div class="cs-icon cs-icon--earn">+2</div>
+          <div class="cs-text"><b>我教 A 技能</b><span>赚 2 个技能币</span></div>
+        </div>
+        <div class="coin-arrow">→</div>
+        <div class="coin-step">
+          <div class="cs-icon cs-icon--spend">-2</div>
+          <div class="cs-text"><b>我学 C 技能</b><span>花 2 个技能币</span></div>
+        </div>
+        <div class="coin-arrow">→</div>
+        <div class="coin-step coin-step--win">
+          <div class="cs-icon cs-icon--win">✓</div>
+          <div class="cs-text"><b>C 不需要教我任何东西</b><span>双边巧合被降级为单边匹配</span></div>
+        </div>
+      </div>
+
+      <div class="coin-tabs">
+        <div class="ct-item"><span class="ct-k">汇率</span><span class="ct-v">1 小时教学 = 1 币，1 小时学习 = 1 币</span></div>
+        <div class="ct-item"><span class="ct-k">新人启动</span><span class="ct-v">注册送 <b>3 币</b>（否则无法开始学，会直接流失）</span></div>
+        <div class="ct-item"><span class="ct-k">通胀控制</span><span class="ct-v">币仅限平台内消费，<b>不可提现</b>（避免变成真钱交易）</span></div>
+      </div>
+    </div>
+
+    <!-- 机制 2 -->
+    <div class="mech">
+      <div class="mech-head">
+        <span class="mech-no">机制 2</span>
+        <h3>三层匹配漏斗 —— 从最优到兜底</h3>
+        <span class="mech-key">核心</span>
+      </div>
+      <div class="funnel">
+        <div class="funnel-row">
+          <div class="funnel-lv lv1">L1</div>
+          <div class="funnel-body">
+            <h5>精准互匹 <span class="funnel-tag">0 成本，直接互换</span></h5>
+            <p>我教你的正好是你要的，你教我的正好是我要的 —— 制造「赚到了」的体验</p>
+            <div class="funnel-rate"><i style="width:12%"></i><span>命中率低，但体验最优</span></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-lv lv2">L2</div>
+          <div class="funnel-body">
+            <h5>技能币匹配 <span class="funnel-tag">保证永远有结果</span></h5>
+            <p>单边匹配即可成立，差额用技能币补 —— 把成功率从 0.8% 拉到接近 100%</p>
+            <div class="funnel-rate"><i style="width:92%"></i><span>覆盖绝大多数场景</span></div>
+          </div>
+        </div>
+        <div class="funnel-row">
+          <div class="funnel-lv lv3">L3</div>
+          <div class="funnel-body">
+            <h5>技能环匹配 <span class="funnel-tag">冷启动解法</span></h5>
+            <p>A 教 B、B 教 C、C 教 A —— 三人循环，在用户池还小的时候也能撮合</p>
+            <div class="funnel-rate"><i style="width:65%"></i><span>低供给期的兜底方案</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 机制 3-5 -->
+    <div class="mech-grid">
+      <div class="mech-sm">
+        <div class="mech-no">机制 3</div>
+        <h4>互试一节课</h4>
+        <p class="mech-sm-sub">低承诺启动</p>
+        <p>匹配成功后双方各教对方 30 分钟、免费，双向评价后再决定是否继续。</p>
+        <p class="mech-sm-val">
+          <b>价值：</b>启动成本从「报名一门课」降到「聊 30 分钟」，同时平台拿到了质量评价数据。
+        </p>
+      </div>
+      <div class="mech-sm">
+        <div class="mech-no">机制 4</div>
+        <h4>双向信用分</h4>
+        <p class="mech-sm-sub">防鸽与质量约束</p>
+        <p>完成一次互换双方各 +5 分；鸽一次 -10 分，信用分直接影响匹配排序。</p>
+        <p class="mech-sm-val">
+          <b>关键：</b>评价是<b>双向对称</b>的 —— 不只学员评老师，老师也评学员「好不好教」。
+        </p>
+      </div>
+      <div class="mech-sm">
+        <div class="mech-no">机制 5</div>
+        <h4>技能地图</h4>
+        <p class="mech-sm-sub">把「人」变成「技能节点」</p>
+        <p>用户浏览的不是人列表，而是技能节点及其供需状态。</p>
+        <div class="supply-demo">
+          <div class="sd-row"><span>Python 入门</span><b class="sd-ok">掌握 12 · 想学 8</b></div>
+          <div class="sd-row"><span>吉他弹唱</span><b class="sd-warn">掌握 5 · 想学 15</b></div>
+          <div class="sd-note">↑ 平台可立刻识别供需失衡，引导用户去教紧缺技能</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 匹配演示（交互） ============ -->
+<section class="section section--dark" id="demo">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">04 · 可交互演示</span>
+      <h2>三层匹配，实际长什么样</h2>
+      <p>点击下方按钮，看同一位用户在三种匹配逻辑下会得到什么结果。</p>
+    </div>
+
+    <div class="demo-wrap">
+      <!-- 我的名片 -->
+      <div class="card-me">
+        <div class="cm-head">
+          <div class="cm-avatar">郭</div>
+          <div>
+            <h4>我的技能名片</h4>
+            <p class="cm-meta">信用分 92 · 技能币 <b id="coinNum">3</b></p>
+          </div>
+        </div>
+        <div class="cm-block">
+          <div class="cm-label cm-label--teach">我能教</div>
+          <div class="tags">
+            <span class="tag tag--teach">吉他弹唱</span>
+            <span class="tag tag--teach">摄影构图</span>
+          </div>
+        </div>
+        <div class="cm-block">
+          <div class="cm-label cm-label--learn">我想学</div>
+          <div class="tags">
+            <span class="tag tag--learn">Python 入门</span>
+            <span class="tag tag--learn">视频剪辑</span>
+          </div>
+        </div>
+        <div class="cm-actions">
+          <button class="btn btn-primary" id="btnMatch">开始匹配</button>
+          <button class="btn btn-ghost" id="btnReset">重置</button>
+        </div>
+      </div>
+
+      <!-- 匹配结果 -->
+      <div class="match-panel">
+        <div class="mp-empty" id="mpEmpty">
+          <div class="mp-empty-icon">⇄</div>
+          <p>点击「开始匹配」，依次查看三层匹配结果</p>
+        </div>
+
+        <!-- L1 -->
+        <div class="mp-result" id="mpL1" data-lv="1">
+          <div class="mp-head">
+            <span class="mp-lv mp-lv--1">L1</span>
+            <h4>精准互匹</h4>
+            <span class="mp-badge mp-badge--best">体验最优</span>
+          </div>
+          <div class="mp-user">
+            <div class="mp-avatar">林</div>
+            <div class="mp-info">
+              <b>林小满</b> <span class="mp-credit">信用 88</span>
+              <p>能教：<span class="tag tag--learn">Python 入门</span> · 想学：<span class="tag tag--teach">吉他弹唱</span></p>
+            </div>
+          </div>
+          <div class="mp-detail">
+            <div class="mpd-row"><span>匹配方式</span><b>双向完全吻合，无需技能币</b></div>
+            <div class="mpd-row"><span>下一步</span><b>互试一节课（各 30 分钟，免费）</b></div>
+            <div class="mpd-row"><span>预计耗时</span><b>本周内可完成首次互换</b></div>
+          </div>
+          <div class="mp-note mp-note--warn">
+            但要注意：L1 的命中率只有 <b>约 0.8%</b>。如果只做这一层，绝大多数用户永远匹配不到人。
+          </div>
+        </div>
+
+        <!-- L2 -->
+        <div class="mp-result" id="mpL2" data-lv="2">
+          <div class="mp-head">
+            <span class="mp-lv mp-lv--2">L2</span>
+            <h4>技能币匹配</h4>
+            <span class="mp-badge mp-badge--main">主力路径</span>
+          </div>
+          <div class="mp-user">
+            <div class="mp-avatar">陈</div>
+            <div class="mp-info">
+              <b>陈一舟</b> <span class="mp-credit">信用 95</span>
+              <p>能教：<span class="tag tag--learn">Python 入门</span> · 想学：<span class="tag tag--teach">商业摄影</span></p>
+            </div>
+          </div>
+          <div class="mp-detail">
+            <div class="mpd-row"><span>匹配方式</span><b>单向命中 —— 他能教我 Python</b></div>
+            <div class="mpd-row"><span>结算</span><b>支付 2 个技能币（当前余额 3）</b></div>
+            <div class="mpd-row"><span>他的收益</span><b>赚 2 币，可拿去学「商业摄影」</b></div>
+          </div>
+          <div class="mp-note mp-note--good">
+            <b>这就是技能币的意义：</b>他不需要教我任何东西，我也不需要会摄影 —— 双边巧合被拆开了。
+          </div>
+        </div>
+
+        <!-- L3 -->
+        <div class="mp-result" id="mpL3" data-lv="3">
+          <div class="mp-head">
+            <span class="mp-lv mp-lv--3">L3</span>
+            <h4>技能环匹配</h4>
+            <span class="mp-badge mp-badge--cold">冷启动解法</span>
+          </div>
+          <div class="mp-ring">
+            <div class="ring-node">
+              <div class="rn-avatar">我</div>
+              <span>教 吉他</span>
+            </div>
+            <div class="ring-arrow">→</div>
+            <div class="ring-node">
+              <div class="rn-avatar">B</div>
+              <span>教 剪辑</span>
+            </div>
+            <div class="ring-arrow">→</div>
+            <div class="ring-node">
+              <div class="rn-avatar">C</div>
+              <span>教 Python</span>
+            </div>
+            <div class="ring-arrow ring-arrow--back">↺</div>
+          </div>
+          <div class="mp-detail">
+            <div class="mpd-row"><span>环路</span><b>我教 C 吉他 → C 教 B Python → B 教我剪辑</b></div>
+            <div class="mpd-row"><span>适用场景</span><b>平台早期、用户池小、技能分布稀疏时</b></div>
+            <div class="mpd-row"><span>结算</span><b>环内按 1:1 时长对冲，不产生币差</b></div>
+          </div>
+          <div class="mp-note">
+            三人及以上成环，把「两两互补」放宽成「整体互补」—— 在冷启动期显著提升撮合率。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 履约链路 ============ -->
+<section class="section" id="flow">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">05 · 履约链路</span>
+      <h2>匹配成功 ≠ 交换成功</h2>
+      <p>从「匹配上」到「真的换成了」，中间有六个阶段、六个流失点。</p>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-no">01</div>
+        <div class="tl-body">
+          <h4>破冰</h4>
+          <p class="tl-do">系统推送双方技能名片 + <b>破冰话术模板</b></p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>匹配成功但没人先开口</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span>系统生成自我介绍，一键发送</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-no">02</div>
+        <div class="tl-body">
+          <h4>互试一节课 <span class="tl-star">关键取舍点</span></h4>
+          <p class="tl-do">双方各教对方 <b>30 分钟</b>，免费；双向评价后决定是否继续</p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>觉得对方水平不行</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span>评价后<b>可无损退出</b>，不扣信用分</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-no">03</div>
+        <div class="tl-body">
+          <h4>定计划</h4>
+          <p class="tl-do">约定课节数、周期、目标 —— 把「互相学习」变成可交付的约定</p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>时间对不上</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span>提供「时间交集」视图，直接推荐可约时段</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-no">04</div>
+        <div class="tl-body">
+          <h4>履约跟踪</h4>
+          <p class="tl-do">进度可视化 + 上课提醒 + 作业打卡</p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>被鸽、拖延</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span>信用分约束 + 提前 24h 提醒 + 一键改约</div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-no">05</div>
+        <div class="tl-body">
+          <h4>完成结算</h4>
+          <p class="tl-do">技能币交割 + 双向评价 + 信用分更新</p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>不评价，数据断档</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span><b>评价后才结算技能币</b>，强制闭环</div>
+        </div>
+      </div>
+
+      <div class="tl-item tl-item--key">
+        <div class="tl-no">06</div>
+        <div class="tl-body">
+          <h4>身份转化 <span class="tl-star tl-star--key">增长命门</span></h4>
+          <p class="tl-do">学会的技能自动加入「我能教」清单</p>
+          <div class="tl-risk"><span class="tl-risk-k">流失点</span>学完就走，供给永远不够</div>
+          <div class="tl-fix"><span class="tl-fix-k">对策</span>系统主动邀请 + <b>新人教课奖励加成</b></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flow-warn">
+      <b>第 06 阶段是整个产品的命门。</b>
+      如果用户学完就走，平台永远缺老师、永远靠补贴拉供给。
+      <b>必须有一个「学员 → 老师」的自动转化机制</b>，飞轮才可能自转。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 增长飞轮 ============ -->
+<section class="section section--dark" id="flywheel">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-tag">06 · 增长飞轮</span>
+      <h2>飞轮能不能自转，取决于匹配率</h2>
+      <p>技能币不是锦上添花 —— 它是点燃这个飞轮的火种。</p>
+    </div>
+
+    <div class="fw-wrap">
+      <div class="fw-svg">
+        <svg viewBox="0 0 400 400" class="fw-svg-el">
+          <defs>
+            <marker id="arw" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#FF8A4C"/>
+            </marker>
+          </defs>
+          <circle cx="200" cy="200" r="140" class="fw-track"/>
+          <circle cx="200" cy="200" r="140" class="fw-dash" marker-end="url(#arw)"/>
+        </svg>
+        <div class="fw-hub">
+          <b>匹配率</b>
+          <span>飞轮的转速</span>
+        </div>
+        <div class="fw-node fw-n1">更多学习者</div>
+        <div class="fw-node fw-n2">更多互换需求</div>
+        <div class="fw-node fw-n3">学成者转为老师</div>
+        <div class="fw-node fw-n4">供给池扩大</div>
+        <div class="fw-node fw-n5">匹配成功率上升</div>
+      </div>
+
+      <div class="fw-side">
+        <div class="fw-card">
+          <h4>飞轮链条</h4>
+          <ol class="fw-list">
+            <li>学习者变多</li>
+            <li>互换需求变多</li>
+            <li><b>学成者转化为新老师</b>（第 06 阶段）</li>
+            <li>可选技能变多</li>
+            <li>匹配成功率上升</li>
+            <li>吸引更多学习者 → 回到第 1 步</li>
+          </ol>
+        </div>
+        <div class="fw-card fw-card--warn">
+          <h4>⚠️ 前提条件</h4>
+          <p>匹配率低于阈值时，用户来两次没结果就走了，<b>飞轮根本不会转</b>。</p>
+          <p>这也是为什么技能币是<b>启动器</b>而不是增长手段 —— 它决定了飞轮能不能被推动第一圈。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 收尾 ============ -->
+<section class="section section--end">
+  <div class="container">
+    <div class="end-box">
+      <h2>设计取舍</h2>
+      <div class="end-grid">
+        <div class="end-item">
+          <h4>先解决「能不能成立」</h4>
+          <p>技能币 + 三层匹配漏斗 —— 决定这个产品是否可能跑起来。</p>
+        </div>
+        <div class="end-item">
+          <h4>再解决「能不能留住」</h4>
+          <p>互试课 + 信用分 + 履约跟踪 —— 决定用户第二次还会不会来。</p>
+        </div>
+        <div class="end-item">
+          <h4>最后解决「能不能自转」</h4>
+          <p>学员转老师 + 技能地图供需引导 —— 决定飞轮能否脱离补贴。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>技能环 SkillLoop · 技能互换平台 · 产品设计原型</p>
+    <p class="footer-sub">
+      <a href="about.html">项目说明</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/GZY126/MT" target="_blank" rel="noopener">GitHub 仓库</a>
+      <span class="sep">·</span>
+      Vibe Coding 方式完成 · 2026
+    </p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
